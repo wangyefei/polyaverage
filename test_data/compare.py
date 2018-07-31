@@ -22,7 +22,7 @@ PaperK = ['124.6(0)','136.3(2)','176(7)','60(0)','117.9(1.2)']
 
 
 
-myG = ['86.4(0)','51.62(0.25)','103(5)','35.63(0.20)','70.13(0.33)']
+myG = ['86.4(0)','51.62(0.25)','103(3)','35.63(0.20)','70.13(0.33)']
 PaperG = ['86.4(0)','51.2(0.2)','103(2.7)','36(0)','70.1(0.5)']
 
 fig, ax = plt.subplots()
@@ -39,9 +39,9 @@ y1err = [10*String_to_float(i)[1] for i in PaperG]
 ax.errorbar(x, y, xerr=xerr, yerr=yerr,fmt='.', markersize='10', ecolor='red',)
 ax.errorbar(x1, y1, xerr=x1err, yerr=y1err,fmt='.', markersize='10', ecolor='red',)
 
-ax.set_title('for clarity all errors times 10')
-ax.set_xlabel('my calc (GPa)')
-ax.set_ylabel('Paper report (GPa)')
+ax.set_title('for clarity all errors times 10',fontname="Times New Roman",fontsize=13)
+ax.set_xlabel('Polyaverage calc (GPa)',fontname="Times New Roman",fontsize=13)
+ax.set_ylabel('Paper report (GPa)',fontname="Times New Roman",fontsize=13)
 ax.set_xlim(30,250)
 ax.set_ylim(30,250)
 ax.plot([0,1000],[0,1000],'k')
