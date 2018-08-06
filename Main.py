@@ -7,11 +7,16 @@ Created on Mon Jul 30 20:36:55 2018
 
 import sys
 import os
-
-from PyQt5.QtWidgets import (QMainWindow, QApplication,QAction,QFileDialog,\
-                             QTextEdit,QTableWidgetItem,QDialog)
-from PyQt5.QtGui import (QIcon,QKeySequence)
-from PyQt5.QtCore import Qt
+try:
+    from PyQt5.QtWidgets import (QMainWindow, QApplication,QAction,QFileDialog,\
+                                 QTextEdit,QTableWidgetItem,QDialog)
+    from PyQt5.QtGui import (QIcon,QKeySequence)
+    from PyQt5.QtCore import Qt
+    PYQT = 5
+except:
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui import *
+    PYQT = 4
 from GUI import GUI
 
 
